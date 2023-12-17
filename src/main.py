@@ -1,7 +1,7 @@
 from modules import HashTable
 
 
-if __name__ == '__main__':
+def main():
     ht = HashTable.QuadraticHashTable()
     action = input('Input action\n(insert <int-key> <val>, remove <int-key>): ')
     while action != 'quit':
@@ -12,3 +12,7 @@ if __name__ == '__main__':
             ht.remove(int(data[1]))
         print(ht)
         action = input('Input action: ')
+
+
+if __name__ == '__main__':
+    main()
