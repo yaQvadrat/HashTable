@@ -67,6 +67,8 @@ class QuadraticHashTable:
                 self.insert(bucket[0], bucket[1])
 
     def __hash(self, key: int, i: int) -> int:
+        if not isinstance(key, int):
+            raise TypeError("Key must be an integer")
         return (key + (i ** 2 + i) // 2) % self._size
     
     def __str__(self) -> str:
